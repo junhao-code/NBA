@@ -1,11 +1,10 @@
 import React from 'react';
-import { ShotChart } from "./ShotChart"
 import nba from 'nba';
 import { Profile } from "./Profile"
-
+import { DataViewContainer } from "./DataViewContainer"
 export class Main extends React.Component {
   state = {
-    playerId: nba.findPlayer("Lebron James").playerId,
+    playerId: nba.findPlayer("Stephen Curry").playerId,
     playerInfo: {},
   }
   componentDidMount() {
@@ -21,7 +20,7 @@ export class Main extends React.Component {
     return (
         <div className="main">
           <Profile playerInfo={this.state.playerInfo} playerId={this.state.playerId}/>
-          <ShotChart playerId={this.state.playerId}/>
+          <DataViewContainer playerId = {this.state.playerId}/>
         </div>
     );
   }

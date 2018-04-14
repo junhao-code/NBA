@@ -1,5 +1,5 @@
 import React from 'react';
-import { Slider, InputNumber, Row, Col } from 'antd';
+import { Slider, InputNumber, Row, Col} from 'antd';
 
 
 export class CountSlider extends React.Component {
@@ -16,8 +16,9 @@ export class CountSlider extends React.Component {
     return (
         <Row>
           <Col span={12}>
-            <Slider min={1} max={20} onChange={this.onChange} value={this.state.inputValue} />
+            <Slider  min={1} max={20} onChange={this.onChange} value={this.state.inputValue}/>
           </Col>
+          <br/>
           <Col span={4}>
             <InputNumber
                 min={1}
